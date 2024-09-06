@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Mitos e Fatos Sobre a Sexualidade na Adolescência</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html"><img src="{% static 'assets/img/logo-ifrn.png' %}" alt="" class="img-fluid"></a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="#hero">Início</a></li>
+          <li><a class="nav-link scrollto" href="#masturbacao">Masturbação</a></li>
+          <li><a class="nav-link scrollto" href="#orientacaosexual">Orientação Sexual</a></li>
+          <li><a class="nav-link scrollto" href="#idgenero">Identidade de Gênero</a></li>
+          <li><a class="nav-link scrollto" href="#consentimento">Consentimento</a></li>
+          <li><a class="nav-link scrollto" href="#praticassexuais">Práticas Sexuais</a></li>
+          <li><a class="nav-link scrollto" href="#sobre">Sobre</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  {% block content %}
+
+  {% endblock  %}
+
+  <footer id="footer">
+
+    <div class="footer-top">
+
+        <div class="container">
+            <div class="align-text-center" id="referencias">
+                <h3>Componentes</h3>
+                <ul style="list-style-type: none;">
+                    <br>
+                    <li>Douglas Santos</li>
+                    <li>Maria Clara</li>
+                    <li>Mateus Cosme</li>
+                    <li>Sara Monalisa</li>
+                    <li>Stephanny Nayane</li>
+                </ul>
+                    <br>
+                <ul style="list-style-type: none;">
+                    <li>Infoweb 3M</li>
+                    <li>Biologia I</li>
+                    <li>Prof. Tuca Surini</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+
+    <div class="footer-top">
+
+      <div class="container">
+          <div class="align-text-center" id="referencias">
+            <h3>Referências</h3>
+            <br>
+            <a href="https://www.scielosp.org/pdf/csc/2011.v16n7/3221-3228/pt">Aspectos da Sexualidade na Adolescência</a><br>
+            <a href="https://super.abril.com.br/mundo-estranho/os-maiores-mitos-e-verdades-sobre-masturbacao-e-virgindade">Os Maiores Mitos e Verdades Sobre Masturbação e Virgindade - Super Abril</a><br>
+            <a href="https://alice.com.br/blog/sua-saude/masturbacao-adolescencia-duvidas/">Dúvidas Sobre Masturbação na Adolescência - Alice</a><br>
+            <a href="https://www.metis.med.up.pt/index.php/Identidade_de_g%C3%A9nero_e_orienta%C3%A7%C3%A3o_sexual_na_adolesc%C3%AAncia">Identidade de Gênero e Orientação Sexual na Adolescência</a><br>
+            <a href="https://orientando.org/2016/09/mitos-e-verdades-sobre-orientacoes/">Mitos e Verdades Sobre Orientações - Orientando</a><br>
+            <a href="https://biessence.com.br/desvendando-mitos-e-verdades-sobre-sexualidade/#:~:text=Mito%3A%20A%20orienta%C3%A7%C3%A3o%20sexual%20%C3%A9,%2C%20homossexual%2C%20bissexual%20ou%20pansexual">Desvendando Mitos e Verdades Sobre Sexualidade - Biessence</a><br>
+            <a href="https://www.aamc.org/media/68691/download">Understanding Gender Identity and Gender Dysphoria</a><br>
+            <a href="https://helloclue.com/pt/artigos/namoros-e-relacionamentos/oito-coisas-para-saber-sobre-consentimento-sexual">Oito Coisas para Saber Sobre Consentimento Sexual</a><br>
+          </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

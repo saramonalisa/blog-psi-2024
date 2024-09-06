@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section id="hero">
+  <style>
+    img-container{
+      text-align: center;
+      display: block;
+    }
+  </style>
+  <div style="text-align:center;" class="hero-container">
+    <h1>Mitos e Fatos Sobre a Sexualidade na Adolescência</h1>
+    <h3>Este site foi criado para fins acadêmicos, com o intuito de compartilhar informações referentes à assuntos da matéria de Biologia. </h3>
+    <h2>
+      <div class="container col-xl-11 col-lg-11 center-column justify-content-center">
+        <p>O termo adolescência vem do latim adolescere, que significa: crescer, desenvolver, tornar-se maior. Biologicamente, representa o estágio do desenvolvimento humano que precede a infância e antecede a idade adulta, abrangendo a faixa etária de 10 a 19 anos, de acordo com a Organização Mundial de Saúde (OMS). É uma etapa marcada pelas transformações decorrentes da puberdade, autodescobrimento, além das mudanças físicas, psicológicas e sociais.   É também nessa fase que a sexualidade começa a se desenvolver. É algo que se integra à construção da personalidade e expressão do adolescente. Com isso, surgem incertezas que levam à disseminação de mitos.  <br><br>A seguir, iremos refutar ou confirmar a veracidade de alguns boatos que se tornaram frequentes sobre o assunto.</p>
+      </div>
+    </h2>
+  </div>
+  <div class="img-container" style="text-align: center;">
+    <h1><a href="index.html"><img src="{% static 'assets/img/foto inicial.jpeg' %}" alt="" class="img-fluid"></a></h1>
+  </div>
+</section>
+
+<main id="main">
+  
+  {% for post in posts %}
+  <section id="{{ post.categoria }}" class="about">
+    <div class="section-title">
+      <p >
+        <img src="{{ post.imagem }}" width="450" height="300">
+      </p>
+      <h2>{{ post.categoria}}</h2>
+    </div>
+    <div class="container col-xl-8 col-lg-8 center-column justify-content-center">
+           {{ post.conteudo}}
+      </div>
+  </section>
+  {% endfor %}
+</main>
+
+{% endblock %}
