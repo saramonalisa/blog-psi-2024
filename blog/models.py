@@ -5,7 +5,7 @@ class Post(models.Model):
     titulo = models.CharField(max_length=100)
     descricao = models.TextField(max_length=600)
     conteudo = models.TextField(max_length=1200)
-    imagem = models.ImageField(blank=True)
+    imagem = models.ImageField(blank=True, upload_to='media/')
     
     def __str__(self):
         return self.titulo
