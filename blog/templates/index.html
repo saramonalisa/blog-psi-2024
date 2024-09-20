@@ -3,59 +3,113 @@
 
 {% block content %}
 
-<section id="hero">
-  <style>
-    img-container{
-      text-align: center;
-      display: block;
-    }
-  </style>
-  <div style="text-align:center;" class="hero-container">
-    <h1>Mitos e Fatos Sobre a Sexualidade na Adolescência</h1>
-    <h3>Este site foi criado para fins acadêmicos, com o intuito de compartilhar informações referentes à assuntos da matéria de Biologia. </h3>
-    <h2>
-      <div class="container col-xl-11 col-lg-11 center-column justify-content-center">
-        <p>O termo adolescência vem do latim adolescere, que significa: crescer, desenvolver, tornar-se maior. Biologicamente, representa o estágio do desenvolvimento humano que precede a infância e antecede a idade adulta, abrangendo a faixa etária de 10 a 19 anos, de acordo com a Organização Mundial de Saúde (OMS). É uma etapa marcada pelas transformações decorrentes da puberdade, autodescobrimento, além das mudanças físicas, psicológicas e sociais.   É também nessa fase que a sexualidade começa a se desenvolver. É algo que se integra à construção da personalidade e expressão do adolescente. Com isso, surgem incertezas que levam à disseminação de mitos.  <br><br>A seguir, iremos refutar ou confirmar a veracidade de alguns boatos que se tornaram frequentes sobre o assunto.</p>
-      </div>
-    </h2>
-  </div>
-  <div class="img-container" style="text-align: center;">
-    <h1><a href="index.html"><img src="{% static 'assets/img/foto inicial.jpeg' %}" alt="" class="img-fluid"></a></h1>
-  </div>
-</section>
+    <article>
 
-<main id="main">
-  
-  {% for post in posts %}
-  <div class="container mx-auto mt-4">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-          {% if post.imagem %}
-          <img src="{{ post.imagem.url }}" class="card-img-top" alt="...">
-          {% else %}
-          <img src="{% static 'assets/img/placeholder.jpg' %}" class="card-img-top" alt="...">
-          {% endif %}
-    <div class="card-body">
-      <h5 class="card-title">{{ post.titulo }}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">{{ post.categoria }}</h6>
-      <p class="card-text">{{ post.descricao }}</p>
-         <a href="{{ post.titulo }}.html" class="btn mr-2">Ler</a>
-    </div>
-    </div>
-      </div>
-  <section id="{{ post.categoria }}" class="about">
-    <div class="section-title">
-      <p >
-        <img src="{{ post.imagem }}" width="450" height="300">
-      </p>
-      <h2>{{ post.categoria}}</h2>
-    </div>
-    <div class="container col-xl-8 col-lg-8 center-column justify-content-center">
-           {{ post.conteudo}}
-      </div>
-  </section>
-  {% endfor %}
-</main>
+      <!-- 
+        - #HERO
+      -->
 
+      <section class="hero" id="home" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">Blog das Biomoléculas</p>
+
+            <h1 class="headline headline-2 section-title">
+              Impacto da <span class="span">Má Alimentação</span> na saúde
+            </h1>
+
+            <p class="hero-text">
+              Para os seres humanos, a alimentação é um artifício essencial, pois tem a função de transportar os nutrientes, vitaminas e minerais necessários para o organismo, além de fornecer energia para a manutenção, crescimento e reprodução, mantendo o funcionamento adequado do corpo. Diante da falta de alguns nutrientes, o corpo pode sofrer graves consequências em virtude da interrupção de alguma atividade básica. Neste blog, apresentaremos os efeitos decorrentes de uma má alimentação na saúde. 
+            </p>
+
+
+          </div>
+
+          <div class="hero-banner">
+
+            <img src="{% static 'static/assets/images/foto-banner.png' %}" width="427" height="auto" alt="" class="w-100">
+
+            <img src="{% static 'static/assets/images/pattern-2.svg' %}" width="27" height="26" alt="shape" class="shape shape-1">
+
+            <img src="{% static 'static/assets/images/pattern-3.svg' %}" width="27" height="26" alt="shape" class="shape shape-2">
+
+          </div>
+
+          <img src="{% static 'static/assets/images/shadow-1.svg' %}" width="500" height="800" alt="" class="hero-bg hero-bg-1">
+
+          <img src="{% static 'static/assets/images/shadow-2.svg' %}" width="500" height="500" alt="" class="hero-bg hero-bg-2">
+
+        </div>
+      </section>
+
+      <!-- 
+        - #FEATURED POST
+      -->
+
+      <section class="section feature" aria-label="feature" id="posts">
+        <div class="container">
+
+          <h2 class="headline headline-2 section-title">
+            <span class="span">Posts relacionados</span>
+          </h2>
+
+          <p class="section-text">
+            Principais postagens sobre o assunto
+          </p>
+
+          {% for post in posts %}
+          <ul class="feature-list">
+
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="{% static 'static/assets/images/oqueeh.png' %}" width="1602" height="903" loading="lazy"
+                    alt="O que é considerado uma má alimentação" class="img-cover">
+                    {% if post.imagem %}
+                    <img src="{{ post.imagem.url }}" class="img-cover" alt="{{ post.titulo }}">
+                    {% else %}
+                    <img src="{% static 'static/assets/img/placeholder.jpg' %}" class="img-cover" alt="{{ post.titulo }}">
+                    {% endif %}
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a>###</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">1 min</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="{{ post.link }}" class="card-title hover-2">{{ post.titulo }}</a>
+                  </h3>
+
+                  <a href="{{ post.link }}" class="btn btn-primary">Leia mais</a>
+
+                  <button class="btn"></button>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+          {% endfor %}
+
+        </div>
+
+        <img src="{% static 'static/assets/images/shadow-3.svg' %}" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
+
+      </section>
+
+    </article>
 {% endblock %}
