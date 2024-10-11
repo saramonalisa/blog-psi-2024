@@ -16,6 +16,7 @@
 
 :root {
 
+
   /**
    * COLORS
    */
@@ -45,6 +46,8 @@
   --text-slate-gray: hsla(217, 17%, 48%, 1); 
 
   /** Text colors */
+
+  
   
   --text-vermelho: #d3141b;
   --text-laranja: #f09418;

@@ -29,17 +29,17 @@
 
           <div class="hero-banner">
 
-            <img src="{% static 'static/assets/images/foto-banner.png' %}" width="427" height="auto" alt="" class="w-100">
+            <img src="{% static 'assets/images/foto-banner.png' %}" width="427" height="auto" alt="" class="w-100">
 
-            <img src="{% static 'static/assets/images/pattern-2.svg' %}" width="27" height="26" alt="shape" class="shape shape-1">
+            <img src="{% static 'assets/images/pattern-2.svg' %}" width="27" height="26" alt="shape" class="shape shape-1">
 
-            <img src="{% static 'static/assets/images/pattern-3.svg' %}" width="27" height="26" alt="shape" class="shape shape-2">
+            <img src="{% static 'assets/images/pattern-3.svg' %}" width="27" height="26" alt="shape" class="shape shape-2">
 
           </div>
 
-          <img src="{% static 'static/assets/images/shadow-1.svg' %}" width="500" height="800" alt="" class="hero-bg hero-bg-1">
+          <img src="{% static 'assets/images/shadow-1.svg' %}" width="500" height="800" alt="" class="hero-bg hero-bg-1">
 
-          <img src="{% static 'static/assets/images/shadow-2.svg' %}" width="500" height="500" alt="" class="hero-bg hero-bg-2">
+          <img src="{% static 'assets/images/shadow-2.svg' %}" width="500" height="500" alt="" class="hero-bg hero-bg-2">
 
         </div>
       </section>
@@ -71,7 +71,7 @@
                     {% if post.imagem %}
                     <img src="{{ post.imagem.url }}" class="img-cover" alt="{{ post.titulo }}">
                     {% else %}
-                    <img src="{% static 'static/assets/img/placeholder.jpg' %}" class="img-cover" alt="{{ post.titulo }}">
+                    <img src="{% static 'assets/img/placeholder.jpg' %}" class="img-cover" alt="{{ post.titulo }}">
                     {% endif %}
                 </figure>
 
@@ -107,7 +107,7 @@
 
         </div>
 
-        <img src="{% static 'static/assets/images/shadow-3.svg' %}" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
+        <img src="{% static 'assets/images/shadow-3.svg' %}" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
 
       </section>
 
