@@ -261,6 +261,7 @@ body.nav-active { overflow: hidden; }
   background-image: var(--gradient-1);
   display: inline-block;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
 }
 

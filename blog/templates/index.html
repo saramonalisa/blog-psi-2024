@@ -59,15 +59,14 @@
             Principais postagens sobre o assunto
           </p>
 
-          {% for post in posts %}
           <ul class="feature-list">
-
+            {% for post in posts %}
             <li>
               <div class="card feature-card">
 
                 <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
                   <img src="{% static 'static/assets/images/oqueeh.png' %}" width="1602" height="903" loading="lazy"
-                    alt="O que é considerado uma má alimentação" class="img-cover">
+                    alt="{{ post.titulo }}" class="img-cover">
                     {% if post.imagem %}
                     <img src="{{ post.imagem.url }}" class="img-cover" alt="{{ post.titulo }}">
                     {% else %}
@@ -101,10 +100,8 @@
 
               </div>
             </li>
-
-          </ul>
           {% endfor %}
-
+          <ul class="feature-list">
         </div>
 
         <img src="{% static 'assets/images/shadow-3.svg' %}" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
