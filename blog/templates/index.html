@@ -65,12 +65,10 @@
               <div class="card feature-card">
 
                 <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="{% static 'static/assets/images/oqueeh.png' %}" width="1602" height="903" loading="lazy"
-                    alt="{{ post.titulo }}" class="img-cover">
                     {% if post.imagem %}
-                    <img src="{{ post.imagem.url }}" class="img-cover" alt="{{ post.titulo }}">
+                    <img src="{{ post.imagem.url }}" class="img-cover" alt="{{ post.titulo }}" loading="lazy">
                     {% else %}
-                    <img src="{% static 'assets/img/placeholder.jpg' %}" class="img-cover" alt="{{ post.titulo }}">
+                    <img src="{% static 'assets/images/placeholder.jpg' %}" class="img-cover" alt="{{ post.titulo }}"  loading="lazy">
                     {% endif %}
                 </figure>
 

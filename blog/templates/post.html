@@ -1,5 +1,15 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}{{ post.titulo }}{% endblock title %}
 {% block content %}
-      
+      {% for post in posts %}
+      <section class="section feature" aria-label="feature" id="posts">
+        <div class="container">
+          <h1 class="headline headline-2" style="text-align: center;">O que é considerado uma má alimentação</h1><br>
+          <a href="#"><img class="img-post" src="assets/images/oqueeh.png" alt="O que é considerado"></a>
+          <br>
+          <p class="hero-text" style="font-size: large;"></p>
+        </div>
+      </section>
+      {% endfor %}
 {% endblock content %}
