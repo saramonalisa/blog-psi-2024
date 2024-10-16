@@ -10,3 +10,12 @@ Esse é o repositório base para a tarefa do blog da disciplina de PSI.
 - Os `commits` devem ser realizados dentro do prazo indicado.
 - **ATENÇÃO** Configure o *user* e *email* corretos (igual ao github) no Git do PC que estiver utilizando, só considerarei os *commits* do seu usuário.
 - Clone o repositório em cada PC que for trabalhar. Lembre-se realizar um `git pull` sempre que mudar de PC para baixar as atualizações que tenham sido feitas em outros locais.
+
+## Integrantes
+
+- Maria Clara
+- Sara Monalisa
+
+## Site original
+
+saramonalisa.github.io/impactos-ma-alimentacao-blog/

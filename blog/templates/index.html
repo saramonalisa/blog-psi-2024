@@ -87,10 +87,10 @@
                   </div>
 
                   <h3 class="headline headline-3">
-                    <a href="{{ post.link }}" class="card-title hover-2">{{ post.titulo }}</a>
+                    <a href="{% url 'post' id=post.id %}" class="card-title hover-2">{{ post.titulo }}</a>
                   </h3>
 
-                  <a href="{{ post.link }}" class="btn btn-primary">Leia mais</a>
+                  <a href="{% url 'post' id=post.id %}" class="btn btn-primary">Leia mais</a>
 
                   <button class="btn"></button>
 
